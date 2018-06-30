@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<img th:src="@{/img/movie-film-reel.jpg}"/>
+<head>
+	<title>HandCrests's Movie Review Site</title>
+</head>
+<body>
+<h1>The list of all reviews on this site:</h1>
+<ul>
+	<li th:each="review : ${reviews}">
+	<a th:href="|@{/reviews/}${review.id}|">
+		<span th:text="${review.name}"></span>
+	</a>
+	
+	</li>
+</ul>
+<img th:src="@{/img/reellong.jpg}"/>
+</body>
+</html>
