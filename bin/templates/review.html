@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-   <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" th:href="@{/css/style.css}" />
-    <title>Review</title>
+   <link rel="stylesheet" type="text/css" media="all" href="/css/reviewstyle.css" th:href="@{/css/reviewstyle.css}" />
+    <title>FlixTime Review</title>
  </head>
-<body>
-<h2>
-	<strong>FlixTime Review:</strong>
+ <img class="top" th:src="@{/img/movie-film-reel.jpg}"/>
+<body class="container">
+<header>
+<nav>
+	<ul>	
+		<li>
+		<a th:href="@{/categories}">Categories</a>
+		</li>
+		<li>
+		<a th:href="@{/reviews}">Reviews</a>
+		</li>
+	</ul>
+</nav>
+</header>
+<h2 class="clearfix">
+	<strong>FlixTime Official Review:</strong>
 </h2>
 
 <h1>
@@ -14,17 +27,22 @@
 </h1>
 
 <h3>
-    <a th:href="|@{/categories/}${review.category.id}|"><span th:text="${review.category}"></span></a>
+    <a th:href="|@{/categories/}${review.category.id}|">This is a <span th:text="${review.category.title}"></span> movie</a>
 </h3>
-    <img th:src="${review.imgUrl}" width="387" height="473" alt="Image size dimensions" />
-<div>
+
+<div class="pic">
+    <img th:src="${review.imgUrl}" width="377" height="473" alt="Image size dimensions" />
+</div>
+
+<div class="desc" >
     <h3>	
     	<span th:text="${review.description}"></span>
     </h3>
 </div>
 
-
-<img th:src="@{/img/reellong.jpg}"/>
+<footer>
+<img class="end" th:src="@{/img/reellong.jpg}"/>
+</footer>
 
 </body>
 </html>

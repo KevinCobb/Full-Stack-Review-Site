@@ -17,10 +17,10 @@ public class ReviewPopulator implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Category comedy = categoryRepo.save(new Category ("Comedy"));
-		Category action = categoryRepo.save(new Category ("Action"));
-		Category horror = categoryRepo.save(new Category ("Horror"));
-		Category drama = categoryRepo.save(new Category ("Drama"));
+		Category comedy = categoryRepo.save(new Category ("Comedy", "Funny movies that make you laugh"));
+		Category action = categoryRepo.save(new Category ("Action", "Fast paced movies with lots of explosions"));
+		Category horror = categoryRepo.save(new Category ("Horror", "Scary movies that are filled with horrific things or people that haunt your dreams"));
+		Category drama = categoryRepo.save(new Category ("Drama", "Movies filled with emotion and touch a cord with everyone"));
 		
 		Review weddingcrashers = reviewRepo.save(new Review("Wedding Crashers", "Jeremy (Vince Vaughn) and John (Owen Wilson) are divorce mediators who spend their free time crashing wedding receptions. For the irrepressible duo, there are few better ways to drink for free and bed vulnerable women." , "/img/wedding.jpg", comedy));
 		
@@ -36,7 +36,7 @@ public class ReviewPopulator implements CommandLineRunner{
 		
 		Review shawShank = reviewRepo.save(new Review("Shawshank Redemption","Adapted from the Stephen King novella Rita Hayworth and Shawshank Redemption, the film tells the story of Andy Dufresne, a banker who spends 19 years in Shawshank State Prison for the murder of his wife and her lover despite his claims of innocence.", "/img/shawshank.jpg", drama));
 		
-		Review JurasicPark = reviewRepo.save(new Review("Jurrasic Park", "Industrialist John Hammond and his bioengineering company, InGen, have created a theme park called Jurassic Park on Isla Nublar, a Costa Rican island, populated with cloned dinosaurs.", "/img/jurassicParkPoster.jpg", action));
+		Review JurassicPark = reviewRepo.save(new Review("Jurassic Park", "Industrialist John Hammond and his bioengineering company, InGen, have created a theme park called Jurassic Park on Isla Nublar, a Costa Rican island, populated with cloned dinosaurs.", "/img/jurassicParkPoster.JPG", action));
 		
 	}
 	

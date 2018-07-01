@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<img th:src="@{/img/movie-film-reel.jpg}"/>
 <head>
-	<title>Review Site</title>
+	<title>FlixTime Review Site</title>
 </head>
 <body>
+<header>
+<nav>
+	<ul>	
+		<li>
+		<a th:href="@{/categories}">Categories</a>
+		</li>
+		<li>
+		<a th:href="@{/reviews}">Reviews</a>
+		</li>
+	</ul>
+</nav>
+</header>
+<img th:src="@{/img/movie-film-reel.jpg}"/>
 <h1>The list of all reviews on this site:</h1>
 <ul>
 	<li th:each="review : ${reviews}">

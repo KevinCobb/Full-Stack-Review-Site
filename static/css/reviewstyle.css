@@ -1,4 +1,58 @@
-body {
-    background-color: rgb(219, 69, 69);
-    border: 5px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+body {
+    box-sizing: border-box;
+	margin: 0;
+    background-color: rgb(167, 132, 57);
+    border: 5px;
+    
+    /* padding-left: 10rem; */
+}
+header {
+    display: block;
+    float: right;
+    margin: 2em auto;
+    text-decoration: none;
+    /* background-image: url(../img/movie-film-reel.jpg); */
+}
+nav {
+    list-style-type: inline;
+    margin: 2rem;
+}
+
+.top {
+    width: 100%;
+    
+    
+}
+
+.end {
+    border:9px double black;
+    background-color: brown;
+    width: 80%;
+}
+
+/* .pic {
+    float: left;
+    clear: left;
+    padding: 1rem;
+}
+
+.desc {
+    float: right;
+    clear: right;
+    padding: 1rem;
+
+}
+.clearfix::after {
+	clear: both;
+	content: '';
+	display: block;
+}
+footer {
+    justify-content: center;
+    float: bottom;
+} */

@@ -1,16 +1,38 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<img th:src="@{/img/movie-film-reel.jpg}"/>
+<html xmlns:th="http://wwww.thymeleaf.org">
 <head>
-<link rel="stylesheet" type="text/css" media="all" href="/css/categoryStyle.css" th:href="@{/css/categoryStyle.css}" />
-	<title>category desc</title>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<link rel="stylesheet" type="text/css" media="all" href="/css/style.css" th:href="@{/css/style.css}"/>
+	<title th:text="|Flixtime:${category.title}|"></title>
 </head>
 <body>
+<header>
+<nav>
+	<ul>	
+		<li>
+		<a th:href="@{/categories}">Categories</a>
+		</li>
+		<li>
+		<a th:href="@{/reviews}">Reviews</a>
+		</li>
+	</ul>
+</nav>
+</header>
+<img th:src="@{/img/movie-film-reel.jpg}"/>
+<h1 th:text="|FlixTime category: ${category.title}|"></h1>
 
-<h1>category description</h1>
+<p class="desc" th:text="|${category.description}|"></p>
 
+<ul>
+	<li th:each="review : ${category.reviews}">
+		<a th:href="|@{/reviews/}${review.id}|">
+			<span th:text="${review.name}"></span>
+		</a>
+	</li>
+</ul>
 
-
-<img th:src="@{/img/reellong.jpg}"/>
+	<img class="end" th:src="@{/img/reellong.jpg}"/>
 </body>
 </html>

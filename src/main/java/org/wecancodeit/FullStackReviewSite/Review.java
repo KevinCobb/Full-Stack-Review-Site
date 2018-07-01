@@ -20,10 +20,7 @@ public class Review {
 	private String description;
 	private String imgUrl;
 	
-	
 	public Review ( ) {}
-
-	
 
 	public Review(String name, String description, String imgUrl, Category category) {
 		
@@ -32,9 +29,7 @@ public class Review {
 		this.description = description;
 		this.imgUrl = imgUrl;
 	}
-
-
-
+	
 	public String getName() {
 		return name;
 	}
@@ -47,25 +42,12 @@ public class Review {
 		return imgUrl;
 	}
 
-
-
 	public Category getCategory() {
 		return category;
 	}
 
-
-
 	public Long getId() {
 		return id;
 	}
-
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }

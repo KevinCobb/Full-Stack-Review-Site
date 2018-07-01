@@ -9,7 +9,13 @@ h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-img {
+.end {
     display: flex;
+    border: 15px double black;
+    background-color: rgb(100, 67, 4);
+}
 
+.desc {
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
