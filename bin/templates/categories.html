@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <img th:src="@{/img/movie-film-reel.jpg}"/>
 <head>
-	<title></title>
+<link rel="stylesheet" type="text/css" media="all" href="/css/style.css" th:href="@{/css/style.css}" />
+	<title>Categories</title>
 </head>
 <body>
+<h1>List of categories:</h1>
+
+ <a></a>
+<ul>
+	<li th:each="category : ${categories}">
+	<a th:href="|@{/categories/}${category.id}|">
+		<span th:text="${category.title}"></span>
+	</a>
+	
+	</li>
+</ul>
 
 
+<footer>
 <img th:src="@{/img/reellong.jpg}"/>
+</footer>
 </body>
 </html>

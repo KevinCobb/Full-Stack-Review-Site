@@ -1,0 +1,13 @@
+body {
+     background-color: rgb(124, 124, 148);
+}
+footer {
+display: block;
+justify-content: bottom;
+}
+
+h1 {
+font-size: 2rem;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}

@@ -26,7 +26,7 @@ public class ReviewPopulator implements CommandLineRunner{
 		
 		Review terminator = reviewRepo.save(new Review("Terminator", "The Terminator is a 1984 American science-fiction action film directed by James Cameron. It stars Arnold Schwarzenegger as the Terminator, a cyborg assassin sent back in time from 2029 to 1984 to kill Sarah Connor (Linda Hamilton), whose son will one day become a savior against machines in a post-apocalyptic future." , "/img/TerminatorPoster.JPG", action));
 		
-		Review ghostbusters = reviewRepo.save(new Review("Ghost Busters","Parapsychologists Peter Venkman, Raymond Stantz, and Egon Spengler are scientists working for Columbia University. After they lose their jobs, they establish the Ghostbusters, a paranormal investigation and elimination service.", "/img/GhostbustersPoster", comedy));
+		Review ghostbusters = reviewRepo.save(new Review("Ghost Busters","Parapsychologists Peter Venkman, Raymond Stantz, and Egon Spengler are scientists working for Columbia University. After they lose their jobs, they establish the Ghostbusters, a paranormal investigation and elimination service.", "/img/GhostbustersPoster.jpg", comedy));
 		
 		Review back2future = reviewRepo.save(new Review("Back To The Future", "After being accidentally sent 30 years into the past in a time-travelling DeLorean invented by mad scientist Dr. Emmett Brown, teenager Marty McFly has to find a way to return to the future safely.", "/img/back.jpg", comedy));
 		
