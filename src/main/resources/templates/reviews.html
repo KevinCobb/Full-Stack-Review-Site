@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
+<link rel="stylesheet" type="text/css" media="all" href="/css/reviewsStyle.css" th:href="@{/css/reviewsStyle.css}" />
 	<title>FlixTime Review Site</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
 </header>
 <img th:src="@{/img/movie-film-reel.jpg}"/>
 <h1>The list of all reviews on this site:</h1>
-<ul>
+<ul class="name">
 	<li th:each="review : ${reviews}">
 	<a th:href="|@{/reviews/}${review.id}|">
 		<span th:text="${review.name}"></span>
@@ -27,6 +28,6 @@
 	
 	</li>
 </ul>
-<img th:src="@{/img/reellong.jpg}"/>
+<img class="end" th:src="@{/img/reellong.jpg}"/>
 </body>
 </html>

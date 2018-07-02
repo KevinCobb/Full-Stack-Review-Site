@@ -1,13 +1,28 @@
 body {
+    box-sizing: border-box;
+	margin: 4rem;
     background-color: rgb(219, 69, 69);
     border: 5px;
     
+}
+.top {
+    width: 100vw;
 }
 
 h2 {
     justify-content: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+nav {
+    list-style-type: inline;
+    margin: 2rem;
+    font-size: 1.25em;
+    color: rgb(102, 11, 11);
+    background-color: rgb(245, 137, 137);
+    position: right;
+    max-width: 8rem;
+}
+
 
 .end {
     display: flex;
@@ -16,6 +31,6 @@ h2 {
 }
 
 .desc {
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }

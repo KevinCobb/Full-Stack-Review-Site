@@ -1,7 +1,7 @@
 body {
     box-sizing: border-box;
 	margin: 0;
-    background-color: rgb(167, 132, 57);
+    background-color: rgb(170, 209, 173);
     border: 5px;
 }
 
@@ -17,12 +17,16 @@ nav {
     margin: 2rem;
     font-size: 1.25em;
     color: rgb(102, 11, 11);
-    background-color: rgb(241, 203, 98);
+    background-color: rgb(196, 235, 245);
     text-decoration: none;
+}
+.name {
+    font-size: 2em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 h1 {
-    font-size: 6em;
+    font-size: 3em;
     margin-left: 50px;
 }
 
@@ -31,11 +35,6 @@ h2 {
 }
 .top {
     width: 100%;
-}
-
-.end {
-    border:9px double black;
-    background-color: brown;
 }
 
 .pic {
@@ -61,4 +60,9 @@ footer {
     padding-right: 20%;
     position: bottom;
     
+}
+.end {
+    display: flex;
+    border: 15px double black;
+    background-color: rgb(87, 85, 83);
 }

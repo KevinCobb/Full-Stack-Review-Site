@@ -6,6 +6,19 @@ display: block;
 justify-content: bottom;
 }
 
+.top {
+    width: 100vw;
+}
+nav {
+    list-style-type: inline;
+    margin: 2rem;
+    font-size: 1.25em;
+    color: rgb(102, 11, 11);
+    background-color: rgb(203, 229, 250);
+    text-decoration: none;
+    max-width: 9rem;
+}
+
 h1 {
 font-size: 2rem;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -13,4 +26,13 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 }
 img {
     border: 10px black;
+}
+.desc {
+ font-size: 1.75rem;
+ margin-left: 10rem;
+}
+
+.end {
+    border:9px double black;
+    background-color: brown;
 }

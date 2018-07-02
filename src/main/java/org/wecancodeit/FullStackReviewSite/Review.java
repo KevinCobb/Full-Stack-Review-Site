@@ -19,17 +19,18 @@ public class Review {
 	@Lob
 	private String description;
 	private String imgUrl;
-	
-	public Review ( ) {}
+
+	public Review() {
+	}
 
 	public Review(String name, String description, String imgUrl, Category category) {
-		
+
 		this.category = category;
 		this.name = name;
 		this.description = description;
 		this.imgUrl = imgUrl;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -49,5 +50,5 @@ public class Review {
 	public Long getId() {
 		return id;
 	}
-	
+
 }

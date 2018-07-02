@@ -4,12 +4,13 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-<link rel="stylesheet" type="text/css" media="all" href="/css/style.css"
-	th:href="@{/css/style.css}" />
-<title>Flixtime Categories</title>
+<link rel="stylesheet" type="text/css" media="all" href="/css/CategoriesStyle.css"
+	th:href="@{/css/CategoriesStyle.css}" />
+<title>FlixTime Categories</title>
 </head>
 <body>
 <header>
+<img th:src="@{/img/movie-film-reel.jpg}" />
 <nav>
 	<ul>	
 		<li>
@@ -21,15 +22,14 @@
 	</ul>
 </nav>
 </header>
-<img th:src="@{/img/movie-film-reel.jpg}" />
 	<h1>The list of all categories on this site:</h1>
-	<ul>
+<ul class="desc">
 		<li th:each="category : ${categories}">
 		  <a th:href="|@{/categories/}${category.id}|">
 		 <span th:text="${category.title}"></span>
 		</a>
 	</li>
 </ul>
-	<img th:src="@{/img/reellong.jpg}" />
+	<img class="end" th:src="@{/img/reellong.jpg}" />
 </body>
 </html>
