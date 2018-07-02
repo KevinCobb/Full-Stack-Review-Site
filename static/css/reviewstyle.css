@@ -5,6 +5,7 @@ body {
     border: 5px;
 }
 
+
 header {
     display: block;
     float: right;
@@ -18,7 +19,8 @@ nav {
     font-size: 1.25em;
     color: rgb(102, 11, 11);
     background-color: rgb(241, 203, 98);
-    text-decoration: none;
+    max-width: 8rem;
+    position: right;
 }
 
 h1 {

@@ -1,38 +1,34 @@
 <!DOCTYPE html>
 <html xmlns:th="http://wwww.thymeleaf.org">
 <head>
-	<meta charset="UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-	<link rel="stylesheet" type="text/css" media="all" href="/css/categoryStyle.css" th:href="@{/css/categoryStyle.css}"/>
-	<title th:text="|Flixtime:${category.title}|"></title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/categoryStyle.css" th:href="@{/css/categoryStyle.css}" />
+<title th:text="|Flixtime:${category.title}|"></title>
 </head>
 <body>
-<img class="top" th:src="@{/img/movie-film-reel.jpg}"/>
-<header>
-<nav>
-	<ul>	
-		<li>
-		<a th:href="@{/categories}">Categories</a>
-		</li>
-		<li>
-		<a th:href="@{/reviews}">Reviews</a>
-		</li>
+	<img class="top" th:src="@{/img/movie-film-reel.jpg}" />
+	<header>
+		<nav>
+			<ul>
+				<li><a th:href="@{/categories}">Categories</a></li>
+				<li><a th:href="@{/reviews}">Reviews</a></li>
+			</ul>
+		</nav>
+	</header>
+	<h1 th:text="|FlixTime category: ${category.title}|"></h1>
+
+	<p class="desc" th:text="|${category.description}|"></p>
+
+	<ul class="desc">
+		<li th:each="review : ${category.reviews}"><a
+			th:href="|@{/reviews/}${review.id}|"> <span
+				th:text="${review.name}"></span>
+		</a></li>
 	</ul>
-</nav>
-</header>
-<h1 th:text="|FlixTime category: ${category.title}|"></h1>
 
-<p class="desc" th:text="|${category.description}|"></p>
-
-<ul class="desc">
-	<li th:each="review : ${category.reviews}">
-		<a th:href="|@{/reviews/}${review.id}|">
-			<span th:text="${review.name}"></span>
-		</a>
-	</li>
-</ul>
-
-	<img class="end" th:src="@{/img/reellong.jpg}"/>
+	<img class="end" th:src="@{/img/reellong.jpg}" />
 </body>
 </html>

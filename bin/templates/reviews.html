@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
+<SCRIPT type="text/javascript">
+	function clickEvent() {
+		alert("Maulik Patel and Kevin Cobb pair programmed this site!");
+	};
+</SCRIPT>
 <head>
-<link rel="stylesheet" type="text/css" media="all" href="/css/reviewsStyle.css" th:href="@{/css/reviewsStyle.css}" />
-	<title>FlixTime Review Site</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="/css/reviewsStyle.css" th:href="@{/css/reviewsStyle.css}" />
+<title>FlixTime Review Site</title>
 </head>
 <body>
-<header>
-<nav>
-	<ul>	
-		<li>
-		<a th:href="@{/categories}">Categories</a>
-		</li>
-		<li>
-		<a th:href="@{/reviews}">Reviews</a>
-		</li>
+	<FORM class="button">
+		<div>
+			<input type="button" id="btnClick" value="Site Authors"
+				onClick="clickEvent();" />
+		</div>
+	</FORM>
+	<header>
+		<nav>
+			<ul>
+				<li><a th:href="@{/categories}">Categories</a></li>
+				<li><a th:href="@{/reviews}">Reviews</a></li>
+			</ul>
+		</nav>
+	</header>
+	<img th:src="@{/img/movie-film-reel.jpg}" />
+	<h1>The list of all reviews on this site:</h1>
+	<ul class="name">
+		<li th:each="review : ${reviews}"><a
+			th:href="|@{/reviews/}${review.id}|"> <span
+				th:text="${review.name}"></span>
+		</a></li>
 	</ul>
-</nav>
-</header>
-<img th:src="@{/img/movie-film-reel.jpg}"/>
-<h1>The list of all reviews on this site:</h1>
-<ul class="name">
-	<li th:each="review : ${reviews}">
-	<a th:href="|@{/reviews/}${review.id}|">
-		<span th:text="${review.name}"></span>
-	</a>
-	
-	</li>
-</ul>
-<img class="end" th:src="@{/img/reellong.jpg}"/>
+	<img class="end" th:src="@{/img/reellong.jpg}" />
 </body>
 </html>
