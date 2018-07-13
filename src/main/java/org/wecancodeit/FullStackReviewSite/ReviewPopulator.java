@@ -10,20 +10,28 @@ public class ReviewPopulator implements CommandLineRunner {
 
 	@Autowired
 	ReviewRepository reviewRepo;
-
+	@Autowired
+	CommentRepository commentRepo;
 	@Autowired
 	CategoryRepository categoryRepo;
+	@Autowired
+	ActorTagRepository actorTagRepo;
 
 	@Override
 	public void run(String... args) throws Exception {
-
+		
 		Category comedy = categoryRepo.save(new Category("Comedy", "Funny movies that make you laugh"));
 		Category action = categoryRepo.save(new Category("Action", "Fast paced movies with lots of explosions"));
 		Category horror = categoryRepo.save(new Category("Horror",
 				"Scary movies that are filled with horrific things or people that haunt your dreams"));
 		Category drama = categoryRepo
 				.save(new Category("Drama", "Movies filled with emotion and touch a cord with everyone"));
+		Category syfi = categoryRepo.save(new Category("Science Fiction", "Movies that contain atleast one of these elements; speculative fiction, futurism, technology, and space travel."));
+		Category military = categoryRepo.save(new Category("Military", "movies that contain a military setting"));
+		Category fantasy = categoryRepo.save(new Category("Fantasy", "Fantasy movie about stuff that doesn't really exsist"));
+		Category crime = categoryRepo.save(new Category("Crime", "Generally based on commiting a crime or catching a criminal"));
 
+		
 		Review weddingcrashers = reviewRepo.save(new Review("Wedding Crashers",
 				"Jeremy (Vince Vaughn) and John (Owen Wilson) are divorce mediators who spend their free time crashing wedding receptions. For the irrepressible duo, there are few better ways to drink for free and bed vulnerable women. Rating: 3.5 stars",
 				"/img/wedding.jpg", comedy));
@@ -71,6 +79,7 @@ public class ReviewPopulator implements CommandLineRunner {
 		Review grandTorino = reviewRepo.save(new Review("Grand Torino",
 				"He is a Korean War veteran whose prize possession is a 1972 Gran Torino he keeps in mint condition. When his neighbor Thao, a young Hmong teenager under pressure from his gang member cousin, tries to steal his Gran Torino, Kowalski sets out to reform the youth. Rating: 5 stars",
 				"/img/torino.jpg", drama));
+		ActorTag arnold = actorTagRepo.save(new ActorTag("Arnold Schwarzenegger",terminator));
 
 	}
 

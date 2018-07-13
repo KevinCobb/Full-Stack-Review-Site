@@ -1,17 +1,26 @@
 package org.wecancodeit.FullStackReviewSite;
 
+import java.util.Arrays;
 import java.util.Collection;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Review {
 	@ManyToOne
 	private Category category;
+	@ManyToMany(mappedBy = "reviews")
+	private Collection<ActorTag> actorTags;
+	
+	@OneToMany(mappedBy = "review")
+	private Collection<Comment> comments;
+
 	@Id
 	@GeneratedValue
 	private Long id;
@@ -31,6 +40,17 @@ public class Review {
 		this.imgUrl = imgUrl;
 	}
 
+	public Collection<ActorTag> getActorTags() {
+		return actorTags;
+	}
+
+	public Collection<Comment> getComments() {
+		return comments;
+	}
+	public void addComment(Comment comment) {
+		comments.add(comment);
+		
+	}
 	public String getName() {
 		return name;
 	}
@@ -50,5 +70,7 @@ public class Review {
 	public Long getId() {
 		return id;
 	}
+
+
 
 }

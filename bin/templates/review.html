@@ -39,9 +39,19 @@
     <h3>	
     	<span th:text="${review.description}"></span>
     </h3>
+    
+    <ul>
+    	<li  th:each="comment: ${review.comments}" th:text="${comment.comment}"> </li>
+    </ul> 
+  
 </div>
 </section>
-
+<hr />
+		<form th:action="|/reviews/${id}|" method="POST"> 
+			<label>Comment: <input type="text" name="comment" /></label>
+			<input type="submit" value="Submit" />			
+		</form>
+        <hr />
 <footer>
 <img class="end" th:src="@{/img/reellong.jpg}"/>
 </footer>
