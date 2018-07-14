@@ -12,14 +12,14 @@
 			<ul>
 				<li><a th:href="@{/categories}">Categories</a></li>
 				<li><a th:href="@{/reviews}">Reviews</a></li>
-				<li><a th:href="@{/actors}">Actors</a></li>
+				<li><a th:href="@{/tags}">Actors</a></li>
 			</ul>
 		</nav>
     </header>
     	<ul class="name">
-		<li th:each="actor : ${actors}"><a
-			th:href="|@{/actors/}${actor.id}|"> <span
-				th:text="${actor.actorName}"></span>
+		<li th:each="tag : ${tags}"><a
+			th:href="|@{/tags/}${tag.id}|"> <span
+				th:text="${tag.actorName}"></span>
 		</a></li>
 	</ul>
 	<img class="end" th:src="@{/img/reellong.jpg}" />

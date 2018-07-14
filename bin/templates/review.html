@@ -17,7 +17,7 @@
 		<a th:href="@{/reviews}">Reviews</a>
 		</li>
 		<li>
-		<a th:href="@{/actors}">Actors</a>
+		<a th:href="@{/tags}">Actors</a>
 		</li>
 	</ul>
 </nav>
@@ -42,30 +42,24 @@
     <h3>	
     	<span th:text="${review.description}"></span>
     </h3>
-<div>    
-    <ul>
-			<li th:each="actor: ${review.actor}">
-			<a th:href="|@{/actors/}${actor.id}|">
-			<span th:text="${actor.actorName}"></span>
-			</a>
-			</li>
-	</ul>
-</div>		
+    
     <ul>
     	<li  th:each="comment: ${review.comments}" th:text="${comment.comment}"> </li>
     </ul> 
-  
+		<ul>
+		<li th:each="tag : ${review.tags}">
+		<a th:href="|@{/actors/}${tag.id}|"> <span
+				th:text="${tag.actorName}"></span>
+		</a></li>
+		</ul>
 </div>
 </section>
-	<ul>
-		<li th:each="Stars: ${actortag.actorname}" th:text="actortag.actorname}"> </li>
-	</ul>
 <hr />
 		<form th:action="|/reviews/${id}|" method="POST"> 
 			<label>Comment: <input type="text" name="comment" /></label>
 			<input type="submit" value="Submit" />			
 		</form>
-        <hr />
+<hr />
 <footer>
 <img class="end" th:src="@{/img/reellong.jpg}"/>
 </footer>

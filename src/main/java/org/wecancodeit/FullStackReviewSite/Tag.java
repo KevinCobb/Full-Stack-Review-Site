@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
 @Entity
-public class ActorTag {
+public class Tag {
 
 	@ManyToMany
 	private Collection<Review> reviews;
@@ -19,9 +19,9 @@ public class ActorTag {
 	private Long id;
 	private String actorName;
 	
-	public ActorTag() {}
+	public Tag() {}
 	
-	public ActorTag(String actorName, Review...reviews) {
+	public Tag(String actorName, Review...reviews) {
 		this.actorName = actorName;
 		this.reviews = Arrays.asList(reviews);
 	}

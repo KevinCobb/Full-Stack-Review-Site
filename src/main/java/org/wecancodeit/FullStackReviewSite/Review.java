@@ -1,6 +1,5 @@
 package org.wecancodeit.FullStackReviewSite;
 
-import java.util.Arrays;
 import java.util.Collection;
 
 import javax.persistence.Entity;
@@ -16,8 +15,8 @@ public class Review {
 	@ManyToOne
 	private Category category;
 	@ManyToMany(mappedBy = "reviews")
-	private Collection<ActorTag> actorTags;
-	
+	private Collection<Tag> tags;
+
 	@OneToMany(mappedBy = "review")
 	private Collection<Comment> comments;
 
@@ -40,17 +39,19 @@ public class Review {
 		this.imgUrl = imgUrl;
 	}
 
-	public Collection<ActorTag> getActorTags() {
-		return actorTags;
+	public Collection<Tag> getTags() {
+		return tags;
 	}
 
 	public Collection<Comment> getComments() {
 		return comments;
 	}
+
 	public void addComment(Comment comment) {
 		comments.add(comment);
-		
+
 	}
+
 	public String getName() {
 		return name;
 	}
@@ -70,7 +71,5 @@ public class Review {
 	public Long getId() {
 		return id;
 	}
-
-
 
 }

@@ -15,7 +15,7 @@ public class ReviewPopulator implements CommandLineRunner {
 	@Autowired
 	CategoryRepository categoryRepo;
 	@Autowired
-	ActorTagRepository actorTagRepo;
+	TagRepository tagRepo;
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -94,19 +94,19 @@ public class ReviewPopulator implements CommandLineRunner {
 				"Kate McKay (Meg Ryan) is a modern day executive, a 21st century woman driven to succeed in the corporate world. Leopold, the third Duke of Albany, is a charming gent and bachelor of the late 18OOs. With career and social expectations looming, each has grown cynical about the very notion of falling in love. Rating: 4 stars",
 				"/img/KateLeopold.jpg", romcom));
 
-		ActorTag arnold = actorTagRepo
-				.save(new ActorTag("Arnold Schwarzenegger", collateralDamage, redheat, expendables2));
-		ActorTag halle = actorTagRepo
-				.save(new ActorTag("Halle Berry", cloudAtlas, xmen, perfectStranger, collateralDamage, swordfish));
-		ActorTag hanks = actorTagRepo.save(new ActorTag("Tom Hanks", cloudAtlas, dragnet, youveGotMail));
-		ActorTag belushi = actorTagRepo.save(new ActorTag("John Belushi", stripes, redheat, bluesbros, neighbors));
-		ActorTag willis = actorTagRepo
-				.save(new ActorTag("Bruce willis", expendables2, perfectStranger, moonriseKingdom));
-		ActorTag jackman = actorTagRepo
-				.save(new ActorTag("Hugh Jackman", collateralDamage, swordfish, xmen, kateAndleopold));
-		ActorTag ackroyd = actorTagRepo.save(new ActorTag("Dan Ackroyd", ghostbusters, bluesbros, neighbors, dragnet));
-		ActorTag murray = actorTagRepo.save(new ActorTag("Bill Murray", ghostbusters, stripes, moonriseKingdom));
-		ActorTag megRyan = actorTagRepo.save(new ActorTag("Meg Ryan", youveGotMail, kateAndleopold));
+		Tag arnold = tagRepo
+				.save(new Tag("Arnold Schwarzenegger", collateralDamage, redheat, expendables2));
+		Tag halle = tagRepo
+				.save(new Tag("Halle Berry", cloudAtlas, xmen, perfectStranger, collateralDamage, swordfish));
+		Tag hanks = tagRepo.save(new Tag("Tom Hanks", cloudAtlas, dragnet, youveGotMail));
+		Tag belushi = tagRepo.save(new Tag("John Belushi", stripes, redheat, bluesbros, neighbors));
+		Tag willis = tagRepo
+				.save(new Tag("Bruce willis", expendables2, perfectStranger, moonriseKingdom));
+		Tag jackman = tagRepo
+				.save(new Tag("Hugh Jackman", collateralDamage, swordfish, xmen, kateAndleopold));
+		Tag ackroyd = tagRepo.save(new Tag("Dan Ackroyd", ghostbusters, bluesbros, neighbors, dragnet));
+		Tag murray = tagRepo.save(new Tag("Bill Murray", ghostbusters, stripes, moonriseKingdom));
+		Tag megRyan = tagRepo.save(new Tag("Meg Ryan", youveGotMail, kateAndleopold));
 
 	}
 

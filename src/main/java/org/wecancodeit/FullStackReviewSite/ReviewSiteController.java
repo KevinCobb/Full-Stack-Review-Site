@@ -17,7 +17,7 @@ public class ReviewSiteController {
 	@Autowired
 	CategoryRepository categoryRepo;
 	@Autowired
-	ActorTagRepository actorTagRepo;
+	TagRepository tagRepo;
 
 	@RequestMapping("/reviews")
 	public String getReview(Model model) {
@@ -52,16 +52,16 @@ public class ReviewSiteController {
 		return "redirect:/reviews/{id}";
 	}
 
-	@RequestMapping("/actors")
+	@RequestMapping("/tags")
 	public String getActors(Model model) {
-		model.addAttribute("actors", actorTagRepo.findAll());
-		return "actors";
+		model.addAttribute("tags", tagRepo.findAll());
+		return "tags";
 	}
 
-	@RequestMapping("/actors/{id}")
+	@RequestMapping("/tags/{id}")
 	public String getActor(@PathVariable(name = "id") Long id, Model model) {
-		model.addAttribute("actor", actorTagRepo.findOne(id));
-		return "actor";
+		model.addAttribute("tag", tagRepo.findOne(id));
+		return "tag";
 
 	}
 
