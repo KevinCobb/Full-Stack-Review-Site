@@ -19,13 +19,13 @@
 <h2 >
 	<strong>FlixTime Official Review:</strong>
 </h2>
-	<span th:text="${actor.actorName}"></span>
+	<span th:text="${tag.actorName}"></span>
 
 <div>
 		<ul>
-			<li th:each="review : ${actor.reviews}">
+			<li th:each="review : ${tag.reviews}">
 			<a th:href="|@{/reviews/}${review.id}|">
-			<span th:text="${reviews.name}"></span>
+			<span th:text="${review.name}"></span>
 			</a>
 			</li>
 		</ul>	

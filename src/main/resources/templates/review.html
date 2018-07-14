@@ -48,7 +48,7 @@
     </ul> 
 		<ul>
 		<li th:each="tag : ${review.tags}">
-		<a th:href="|@{/actors/}${tag.id}|"> <span
+		<a th:href="|@{/tags/}${tag.id}|"> <span
 				th:text="${tag.actorName}"></span>
 		</a></li>
 		</ul>
