@@ -16,6 +16,9 @@
 		<li>
 		<a th:href="@{/reviews}">Reviews</a>
 		</li>
+		<li>
+		<a th:href="@{/actors}">Actors</a>
+		</li>
 	</ul>
 </nav>
 </header>
@@ -39,13 +42,24 @@
     <h3>	
     	<span th:text="${review.description}"></span>
     </h3>
-    
+<div>    
+    <ul>
+			<li th:each="actor: ${review.actor}">
+			<a th:href="|@{/actors/}${actor.id}|">
+			<span th:text="${actor.actorName}"></span>
+			</a>
+			</li>
+	</ul>
+</div>		
     <ul>
     	<li  th:each="comment: ${review.comments}" th:text="${comment.comment}"> </li>
     </ul> 
   
 </div>
 </section>
+	<ul>
+		<li th:each="Stars: ${actortag.actorname}" th:text="actortag.actorname}"> </li>
+	</ul>
 <hr />
 		<form th:action="|/reviews/${id}|" method="POST"> 
 			<label>Comment: <input type="text" name="comment" /></label>

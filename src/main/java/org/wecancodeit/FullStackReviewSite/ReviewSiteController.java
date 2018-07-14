@@ -45,13 +45,24 @@ public class ReviewSiteController {
 		return "category";
 
 	}
+
 	@RequestMapping(value = "/reviews/{id}", method = RequestMethod.POST)
-	public String addComment(@PathVariable(name="id")Long id, String comment) {
-		commentRepo.save(new Comment(comment, reviewRepo.findOne(id) ));
+	public String addComment(@PathVariable(name = "id") Long id, String comment) {
+		commentRepo.save(new Comment(comment, reviewRepo.findOne(id)));
 		return "redirect:/reviews/{id}";
 	}
 
+	@RequestMapping("/actors")
+	public String getActors(Model model) {
+		model.addAttribute("actors", actorTagRepo.findAll());
+		return "actors";
+	}
 
+	@RequestMapping("/actors/{id}")
+	public String getActor(@PathVariable(name = "id") Long id, Model model) {
+		model.addAttribute("actor", actorTagRepo.findOne(id));
+		return "actor";
 
+	}
 
 }

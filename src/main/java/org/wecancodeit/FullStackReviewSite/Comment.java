@@ -10,39 +10,31 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Comment {
-	
+
 	@ManyToOne
 	private Review review;
-	
-//	private Collection<Comment> comments;
-	
+
 	@Id
 	@GeneratedValue
 	private Long id;
 	@Lob
 	private String comment;
 
-	public Comment() {}
+	public Comment() {
+	}
 
-	
 	public Comment(String comment, Review review) {
 		this.comment = comment;
 		this.review = review;
 	}
 
-
-	
-
-
 	public Review getReview() {
 		return review;
 	}
 
-
 	public Long getId() {
 		return id;
 	}
-
 
 	public String getComment() {
 		return comment;
@@ -52,6 +44,5 @@ public class Comment {
 	public String toString() {
 		return comment;
 	}
-	
-	
+
 }
