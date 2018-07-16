@@ -5,7 +5,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Service;
 import org.wecancodeit.FullStackReviewSite.Review;
 
-@Service
+//@Service
 public class ReviewPopulator implements CommandLineRunner {
 
 	@Autowired
@@ -60,7 +60,7 @@ public class ReviewPopulator implements CommandLineRunner {
 
 		Review bluesbros = reviewRepo.save(new Review("Blues Brothers",
 				"After his release from prison, Jake (John Belushi) reunites with his brother, Elwood (Dan Aykroyd) -- collectively known as the \"Blues Brothers.\" Jake's first task is to save the orphanage the brothers grew up in from closing. Rating: 4.5 stars",
-				"/img/blues.jpg", comedy));
+				"/img/blues.gif", comedy));
 
 		Review neighbors = reviewRepo.save(new Review("Neighbors",
 				"Earl Keese (John Belushi) lives in an orderly house with his wife, Enid (Kathryn Walker), and daughter, Elaine (Lauren-Marie Taylor). His routine is disrupted when loudmouthed Vic (Dan Aykroyd) and his oversexed wife, Ramona (Cathy Moriarty), move in next door. Rating: 4.5 stars",
@@ -101,7 +101,7 @@ public class ReviewPopulator implements CommandLineRunner {
 		Tag hanks = tagRepo.save(new Tag("Tom Hanks", cloudAtlas, dragnet, youveGotMail));
 		Tag belushi = tagRepo.save(new Tag("John Belushi", stripes, redheat, bluesbros, neighbors));
 		Tag willis = tagRepo
-				.save(new Tag("Bruce willis", expendables2, perfectStranger, moonriseKingdom));
+				.save(new Tag("Bruce Willis", expendables2, perfectStranger, moonriseKingdom));
 		Tag jackman = tagRepo
 				.save(new Tag("Hugh Jackman", collateralDamage, swordfish, xmen, kateAndleopold));
 		Tag ackroyd = tagRepo.save(new Tag("Dan Ackroyd", ghostbusters, bluesbros, neighbors, dragnet));

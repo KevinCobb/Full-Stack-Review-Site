@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" type="text/css" media="all"
 	href="/css/reviewstyle.css" th:href="@{/css/reviewstyle.css}" />
+	<script src="/static/js/app.js"></script>
 <title>FlixTime Review</title>
  </head>
  <img class="top" th:src="@{/img/movie-film-reel.jpg}"/>
@@ -30,9 +31,6 @@
 	<span th:text="${review.name}"></span>
 </h1>
 <section>
-<h3>
-    <a th:href="|@{/categories/}${review.category.id}|">Click here for more titles in this <span th:text="${review.category.title}"></span> category</a>
-</h3>
 
 <div class="pic">
     <img th:src="${review.imgUrl}" width="377" height="473" alt="Image size dimensions" />
@@ -43,23 +41,31 @@
     	<span th:text="${review.description}"></span>
     </h3>
     
-    <ul>
-    	<li  th:each="comment: ${review.comments}" th:text="${comment.comment}"> </li>
-    </ul> 
-		<ul>
+</div>
+<div>
+<h2> Starring: </h2>
+	<ul class="name">
 		<li th:each="tag : ${review.tags}">
-		<a th:href="|@{/tags/}${tag.id}|"> <span
-				th:text="${tag.actorName}"></span>
-		</a></li>
-		</ul>
+			<a th:href="|@{/tags/}${tag.id}|">
+		 		<span th:text="${tag.actorName}"></span>
+			</a>
+		</li>
+	</ul>
 </div>
 </section>
 <hr />
+
 		<form th:action="|/reviews/${id}|" method="POST"> 
-			<label>Comment: <input type="text" name="comment" /></label>
+			<label>Add your review: <input type="text" name="comment" /></label>
 			<input type="submit" value="Submit" />			
 		</form>
+    <ul class="comments">
+    	<li th:each="comment: ${review.comments}" th:text="${comment.comment}"> </li>
+    </ul> 
 <hr />
+<h3>
+    <a id="cat" th:href="|@{/categories/}${review.category.id}|">Click here for more titles in this <span th:text="${review.category.title}"></span> category</a>
+</h3>
 <footer>
 <img class="end" th:src="@{/img/reellong.jpg}"/>
 </footer>
