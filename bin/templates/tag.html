@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html xmlns:th="http://wwww.thymeleaf.org">
 <head>
-    <meta charset="UTF-8"/>
+	<meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="all"
+	href="/css/Tag.css" th:href="@{/css/Tag.css}" />
+	<script src="/static/js/app.js"></script>
+    <title>Actor</title>
 </head>
 <body>
-<header>
-<nav>
-	<ul>	
-		<li><a th:href="@{/categories}">Categories</a></li>
-		<li><a th:href="@{/reviews}">Reviews</a></li>
-		<li><a th:href="@{/tags}">Actors</a></li>
-	</ul>
-</nav>
-</header>
-<h2 >
-	<strong>FlixTime Official Review:</strong>
-</h2>
-	<span th:text="${tag.actorName}"></span>
-
+<section class="wrapper">
 <div>
+    <nav>
+		<ul class="box a">	
+			<li><a th:href="@{/categories}">Categories</a></li>
+			<li><a th:href="@{/reviews}">Reviews</a></li>
+			<li><a th:href="@{/tags}">Actors</a></li>
+		</ul>
+		<!-- <button id="btn1">Categories</button>
+            <button type="button" class="btn2">
+                Reviews
+            </button><button type="button" class="btn3">
+                Actors
+            </button> -->
+    </nav>
+<div class="box b">
+<h2 >
+	FlixTime presents:
+</h2>
+</div>
+<div class="box c">
+    <h2></h2>
+</div>
+
+<div class="box d">
+	<h1 th:text="${tag.actorName}"></h1>
+</div>
+<div class="box e">
 		<ul>
 			<li th:each="review : ${tag.reviews}">
 			<a th:href="|@{/reviews/}${review.id}|">
@@ -29,9 +45,8 @@
 			</a>
 			</li>
 		</ul>	
+    </div>
 </div>
-		
-
-
+</section>	
 </body>
 </html>

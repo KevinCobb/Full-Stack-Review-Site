@@ -1,0 +1,79 @@
+
+html {
+	background: url("/img/background2.jpeg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+	width: 56%;
+	height: 39%;
+	margin-top: 3%;   
+	margin-left: 22%;
+	margin-right: 22%;
+	margin-bottom:58%;
+	font-color: white;
+	justify-content: center;
+}
+
+h1 {
+	margin-left: 5.5rem;
+	color: white;
+	font-size: 3em;
+} 
+
+h2{
+	color: white;
+	margin-left: 2rem;
+} 
+
+ul{
+	color: white;
+}
+
+/*
+.wrapper {
+        display: grid;
+        
+    grid-gap: 10px;
+        grid-template-columns: 150px 150px 150px 150px;
+        
+        grid-template-rows: 80px 80px 80px 80px;
+        background-color: #fff;
+        color: #444;
+    }
+
+    .box {
+        background-color: #444;
+        color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 1.2em;
+
+    }
+
+    .a {
+        grid-column: col / span 2;
+        grid-row: row ;
+    }
+    .b {
+        grid-column-start: 4;
+        grid-column-end: 2;
+        grid-row: 1 ;
+    }
+    .c {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row: row 2 ;
+    }
+    .d {
+        grid-column-start: 4;
+        grid-column-end: 2;
+        grid-row: row 2 ;
+    }
+
+    .e {
+        grid-column: col / span 4;
+        grid-row: row 3;
+    }*/

@@ -4,24 +4,28 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" type="text/css" media="all"
+	href="/css/tags.css" th:href="@{/css/tags.css}" />
+	<script src="/static/js/app.js"></script>
     <title>Actors</title>
 </head>
 <body>
     <header>
     	<nav>
-			<ul>
+			<ol>
 				<li><a th:href="@{/categories}">Categories</a></li>
 				<li><a th:href="@{/reviews}">Reviews</a></li>
 				<li><a th:href="@{/tags}">Actors</a></li>
-			</ul>
+			</ol>
 		</nav>
     </header>
+    <h1>FlixTime Actors:</h1>
     	<ul class="name">
 		<li th:each="tag : ${tags}"><a
-			th:href="|@{/tags/}${tag.id}|"> <span
-				th:text="${tag.actorName}"></span>
+			th:href="|@{/tags/}${tag.id}|">
+			 <span th:text="${tag.actorName}"></span>
 		</a></li>
 	</ul>
-	<img class="end" th:src="@{/img/reellong.jpg}" />
+	
 </body>
 </html>
